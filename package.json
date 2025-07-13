@@ -1,0 +1,23 @@
+{
+  "name": "prueba2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Christho123/prueba2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Christho123/prueba2/issues"
+  },
+  "homepage": "https://github.com/Christho123/prueba2#readme",
+  "dependencies": {
+    "eslint": "^9.31.0"
+  }
+}
