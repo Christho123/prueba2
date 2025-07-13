@@ -9,23 +9,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clonar repositorio
+      - name: pinga
         uses: actions/checkout@v4
 
-      - name: Mostrar archivos del proyecto
+      - name: gadiel
         run: ls -R
 
-      - name: Instalar HTMLHint
+      - name: se
         run: |
           npm install -g htmlhint
           htmlhint html/index.html || exit 1
 
-      - name: Instalar ESLint versión 8
+      - name: la
         run: |
           npm install -g eslint@8
           eslint js/script.js || exit 1
       
-      - name: Instalar StylelintTTT
+      - name: come entera
         run: |
           npm install -g stylelint stylelint-config-standard
           echo '{ "extends": "stylelint-config-standard" }' > .stylelintrc.json
