@@ -2,7 +2,7 @@ name: Validación Frontend
 
 on:
   push:
-    branches: [main]  # Se ejecuta cuando haces push a la rama main
+    branches: [main]  # Puedes cambiar 'main' por otra rama si la usas
 
 jobs:
   validar:
@@ -15,12 +15,12 @@ jobs:
       - name: Mostrar archivos del proyecto
         run: ls -R
 
-      - name: Validar HTML con htmlhint
+      - name: Instalar HTMLHint
         run: |
           npm install -g htmlhint
           htmlhint index.html || exit 1
 
-      - name: Validar JS con eslint
+      - name: Instalar ESLint versión 8
         run: |
-          npm install -g eslint
+          npm install -g eslint@8
           eslint script.js || exit 1
