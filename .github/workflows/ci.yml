@@ -1,23 +1,26 @@
-name: Linter Frontend
+name: Validación Frontend
 
 on:
   push:
-    branches: [main]
+    branches: [main]  # Se ejecuta cuando haces push a la rama main
 
 jobs:
-  lint:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Clonar repositorio
+      uses: actions/checkout@v4
 
-    - name: Instalar Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 20
+    - name: Mostrar archivos del proyecto
+      run: ls -R
 
-    - name: Instalar ESLint
-      run: npm install eslint --global
+    - name: Validar HTML con htmlhint
+      run: |
+        npm install -g htmlhint
+        htmlhint index.html || exit 1
 
-    - name: Lint JavaScript
-      run: eslint script.js
+    - name: Validar JS con eslint
+      run: |
+        npm install -g eslint
+        eslint script.js || exit 1
