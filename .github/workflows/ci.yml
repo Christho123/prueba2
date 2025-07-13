@@ -18,16 +18,16 @@ jobs:
       - name: Instalar HTMLHint
         run: |
           npm install -g htmlhint
-          htmlhint index.html || exit 1
+          htmlhint html/index.html || exit 1
 
       - name: Instalar ESLint versión 8
         run: |
           npm install -g eslint@8
-          eslint script.js || exit 1
+          eslint js/script.js || exit 1
       
       - name: Instalar Stylelint
         run: |
           npm install -g stylelint stylelint-config-standard
           echo '{ "extends": "stylelint-config-standard" }' > .stylelintrc.json
-          stylelint style.css || exit 1
+          stylelint css/style.css || exit 1
 
