@@ -6,7 +6,7 @@ function convertir() {
   if (isNaN(valor)) {
     alert("Por favor ingrese un valor numérico válido");
     return;
-  
+  }
 
   let resultado = convertirTemperatura(valor, de, a);
 
