@@ -15,19 +15,19 @@ jobs:
       - name: gadiel
         run: ls -R
 
-      - name: se
+      - name: Verificar Codigo HTML
         run: |
           npm install -g htmlhint
-          htmlhint html/index.html || exit 1
+          htmlhint plubic/index.html || exit 1
 
-      - name: la
+      - name: Verificar Codigo JavaScript
         run: |
           npm install -g eslint@8
-          eslint js/script.js || exit 1
+          eslint public/script.js || exit 1
       
-      - name: come entera
+      - name: Verificar Codigo CSS
         run: |
           npm install -g stylelint stylelint-config-standard
           echo '{ "extends": "stylelint-config-standard" }' > .stylelintrc.json
-          stylelint css/style.css || exit 1
+          stylelint public/style.css || exit 1
 
